@@ -1,0 +1,5 @@
+image:
+  registry: robotshopdevacr.azurecr.io
+  repository: baseimages/kube-state-metrics/kube-state-metrics
+  tag: v2.17.0-internal
+  pullPolicy: Always

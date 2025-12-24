@@ -1,0 +1,33 @@
+prometheus-windows-exporter:
+  prometheus:
+    monitor:
+      enabled: false
+
+alertmanager:
+  enabled: false
+
+grafana:
+  enabled: false
+
+prometheusOperator:
+  admissionWebhooks:
+    deployment:
+      image:
+        registry: robotshopdevacr.azurecr.io
+        repository: baseimages/prometheus-operator/admission-webhook
+        tag: v0.87.1-internal
+        pullPolicy: Always
+
+  prometheusConfigReloader:
+    image:
+      registry: robotshopdevacr.azurecr.io
+      repository: baseimages/prometheus-operator/prometheus-config-reloader
+      tag: v0.87.1-internal
+
+prometheus:
+  prometheusSpec:
+    image:
+      registry: robotshopdevacr.azurecr.io
+      repository: baseimages/prometheus/prometheus
+      tag: v3.8.1-internal
+      pullPolicy: Always
