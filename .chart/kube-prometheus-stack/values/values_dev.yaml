@@ -31,3 +31,6 @@ prometheus:
       repository: baseimages/prometheus/prometheus
       tag: v3.8.1-internal
       pullPolicy: Always
+
+    routePrefix: /prometheus
+    externalUrl: http://20.235.170.229/prometheus
